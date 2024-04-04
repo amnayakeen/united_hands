@@ -1,1 +1,4 @@
 # united_hands
+**LINKS FOR REFERALS **
+Git & Github – https://youtu.be/fQLK8Ib_SKk?si=Wt-0LapwMnHRx9Ve (link for 1 video) Check relevant videos in playlist as needed Git & GitHub for beginners by Net Ninja (name of playlist)
+Foreign key creation - https://youtu.be/yoX1qoKfe88?si=R8YU0T9KpleTz1oy
