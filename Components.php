@@ -52,118 +52,118 @@
                 </header>");
         }
         public function dashboardSidebar(){
-            echo(<div class="container-fluid">
-    <div class="row flex-nowrap">
-        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-white">
-            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-black min-vh-100">
-                <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-black text-decoration-none">
-                    <span class="fs-5 d-none d-sm-inline">Menu</span>
+            echo("<div class='container-fluid'>
+    <div class='row flex-nowrap'>
+        <div class='col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-white'>
+            <div class='d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-black min-vh-100'>
+                <a href='/' class='d-flex align-items-center pb-3 mb-md-0 me-md-auto text-black text-decoration-none'>
+                    <span class='fs-5 d-none d-sm-inline'>Menu</span>
                 </a>
-                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link align-middle px-0">
-                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                <ul class='nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start' id='menu'>
+                    <li class='nav-item'>
+                        <a href='#' class='nav-link align-middle px-0'>
+                            <i class='fs-4 bi-house'></i> <span class='ms-1 d-none d-sm-inline'>Home</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
-                        <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
-                            <li class="w-100">
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Profile</span></a>
+                        <a href='#submenu1' data-bs-toggle='collapse' class='nav-link px-0 align-middle'>
+                            <i class='fs-4 bi-speedometer2'></i> <span class='ms-1 d-none d-sm-inline'>Dashboard</span> </a>
+                        <ul class='collapse show nav flex-column ms-1' id='submenu1' data-bs-parent='#menu'>
+                            <li class='w-100'>
+                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'>Profile</span></a>
                             </li>
                             
                     <li>
-                        <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-                            <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Project Calender</span></a>
-                        <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                        <a href='#submenu2' data-bs-toggle='collapse' class='nav-link px-0 align-middle'>
+                            <i class='fs-4 bi-bootstrap'></i> <span class='ms-1 d-none d-sm-inline'>Project Calender</span></a>
+                        <ul class='collapse nav flex-column ms-1' id='submenu2' data-bs-parent='#menu'>
                             <li class="w-100">
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline"></span> 1</a>
+                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'></span> 1</a>
                             </li>
                             <li>
       
                         </ul>
                     </li>
                     <li>
-                        <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                            <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline"></span> Project </a>
-                            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-                            <li class="w-100">
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Ongoing Project</span> </a>
+                        <a href='#submenu3' data-bs-toggle='collapse' class='nav-link px-0 align-middle'>
+                            <i class='fs-4 bi-grid'></i> <span class='ms-1 d-none d-sm-inline'></span> Project </a>
+                            <ul class='collapse nav flex-column ms-1' id='submenu3' data-bs-parent='#menu'>
+                            <li class='w-100'>
+                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'>Ongoing Project</span> </a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Upcomming Project</span> </a>
+                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'>Upcomming Project</span> </a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline"></span>Completed Project</a>
+                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'></span>Completed Project</a>
                             </li>
                             
                         </ul>
                     </li>
                     <li>
-                        <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                            <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline"></span> Training Session </a>
-                            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-                            <li class="w-100">
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Ongoing Training Session</span> </a>
+                        <a href='#submenu3' data-bs-toggle='collapse' class='nav-link px-0 align-middle'>
+                            <i class='fs-4 bi-grid'></i> <span class='ms-1 d-none d-sm-inline'></span> Training Session </a>
+                            <ul class='collapse nav flex-column ms-1' id='submenu3' data-bs-parent='#menu'>
+                            <li class='w-100'>
+                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'>Ongoing Training Session</span> </a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Upcomming Training Session</span> </a>
+                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'>Upcomming Training Session</span> </a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline"></span>Completed Training Session</a>
+                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'></span>Completed Training Session</a>
                             </li>
                             
                         </ul>
                     </li>
                     <li>
-                        <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                            <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline"></span> Community Gathering</a>
-                            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-                            <li class="w-100">
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Ongoing Community Gathering</span> </a>
+                        <a href='#submenu3' data-bs-toggle='collapse' class='nav-link px-0 align-middle'>
+                            <i class='fs-4 bi-grid'></i> <span class='ms-1 d-none d-sm-inline'></span> Community Gathering</a>
+                            <ul class='collapse nav flex-column ms-1' id='submenu3' data-bs-parent='#menu'>
+                            <li class='w-100'>
+                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'>Ongoing Community Gathering</span> </a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Upcomming Community Gathering</span> </a>
+                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'>Upcomming Community Gathering</span> </a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline"></span>Completed Community Gathering</a>
+                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'></span>Completed Community Gathering</a>
                             </li>
                             
                         </ul>
                     </li>
-                    <li class="w-100">
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Chat</span> </a>
+                    <li class='w-100'>
+                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'>Chat</span> </a>
                             </li>
-                            <li class="w-100">
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Reports</span> </a>
+                            <li class='w-100'>
+                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'>Reports</span> </a>
                             </li>
 
                 </ul>
                 <hr>
-                <div class="dropdown pb-4">
-                    <a href="#" class="d-flex align-items-center text-black text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="image\profile.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
-                        <span class="d-none d-sm-inline mx-1">cleanroad</span>
+                <div class='dropdown pb-4'>
+                    <a href='#' class='d-flex align-items-center text-black text-decoration-none dropdown-toggle' id='dropdownUser1' data-bs-toggle='dropdown' aria-expanded='false'>
+                        <img src='image\profile.png' alt='hugenerd' width='30' height='30' class='rounded-circle'>
+                        <span class='d-none d-sm-inline mx-1'>cleanroad</span>
                     </a>
                     
                 </div>
             </div>
         </div>
 
-  <section style="background-color: #eee;">
-  <div class="container py-5">
-    <div class="row">
-      <div class="col">
-        <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
-          <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">User</a></li>
-            <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+  <section style='background-color: #eee;'>
+  <div class='container py-5'>
+    <div class='row'>
+      <div class='col'>
+        <nav aria-label='breadcrumb' class='bg-light rounded-3 p-3 mb-4'>
+          <ol class='breadcrumb mb-0'>
+            <li class='breadcrumb-item'><a href='#'>Home</a></li>
+            <li class='breadcrumb-item'><a href='#'>User</a></li>
+            <li class='breadcrumb-item active' aria-current='page'>User Profile</li>
           </ol>
         </nav>
       </div>
-    </div>)
+    </div>");
 
         }
         public function footer(){
