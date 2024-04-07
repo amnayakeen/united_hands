@@ -163,11 +163,7 @@
                                             </ol>
                                         </nav>
                                     </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>");
+                                </div>");
 
         }
         public function footer(){
