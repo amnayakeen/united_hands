@@ -52,119 +52,82 @@
                 </header>");
         }
         public function dashboardSidebar(){
-            echo("<div class='container-fluid'>
-                    <div class='row flex-nowrap'>
-                        <div class='col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-white'>
-                            <div class='d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-black min-vh-100'>
-                                <a href='/' class='d-flex align-items-center pb-3 mb-md-0 me-md-auto text-black text-decoration-none'>
-                                    <span class='fs-5 d-none d-sm-inline'>Menu</span>
+            echo("  <div class='container-fluid'>
+            <div class='row flex-nowrap'>
+                <div class='col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-white'>
+                    <div class='d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100'>
+                        <a href='/' class='d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none'>
+                            <span class='fs-5 d-none d-sm-inline'>Menu</span>
+                        </a>
+                        <ul class='nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start' id='menu'>
+                            <li class='nav-item'>
+                                <a href='#' class='nav-link align-middle px-0'>
+                                    <i class='fs-4 bi-house'></i> <span class='ms-1 d-none d-sm-inline'>Home</span>
                                 </a>
-                                <ul class='nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start' id='menu'>
+                            </li>
+                            <li>
+                                <a href='#submenu1' data-bs-toggle='collapse' class='nav-link px-0 align-middle'>
+                                    <i class='fs-4 bi-speedometer2'></i> <span class='ms-1 d-none d-sm-inline'>Dashboard</span> </a>
+                                <ul class='collapse show nav flex-column ms-1' id='submenu1' data-bs-parent='#menu'>
+                                    <li class='w-100'>
+                                        <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'>Profile</span></a>
+                                    </li>
+                                    <ul class='nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start' id='menu'>
                                     <li class='nav-item'>
                                         <a href='#' class='nav-link align-middle px-0'>
-                                            <i class='fs-4 bi-house'></i> <span class='ms-1 d-none d-sm-inline'>Home</span>
+                                            <i class='fs-4 bi-house'></i> <span class='ms-1 d-none d-sm-inline'>Chat</span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href='#submenu1' data-bs-toggle='collapse' class='nav-link px-0 align-middle'>
-                                            <i class='fs-4 bi-speedometer2'></i> <span class='ms-1 d-none d-sm-inline'>Dashboard</span> </a>
-                                        <ul class='collapse show nav flex-column ms-1' id='submenu1' data-bs-parent='#menu'>
-                                            <li class='w-100'>
-                                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'>Profile</span></a>
-                                            </li>
-
-                                    <li>
-                                        <a href='#submenu2' data-bs-toggle='collapse' class='nav-link px-0 align-middle'>
-                                            <i class='fs-4 bi-bootstrap'></i> <span class='ms-1 d-none d-sm-inline'>Project Calender</span></a>
-                                        <ul class='collapse nav flex-column ms-1' id='submenu2' data-bs-parent='#menu'>
-                                            <li class='w-100'>
-                                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'></span> 1</a>
-                                            </li>
-                                            <li>
-
-                                        </ul>
+                                    <ul class='nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start' id='menu'>
+                                    <li class='nav-item'>
+                                        <a href='#' class='nav-link align-middle px-0'>
+                                            <i class='fs-4 bi-house'></i> <span class='ms-1 d-none d-sm-inline'>Report</span>
+                                        </a>
                                     </li>
-                                    <li>
-                                        <a href='#submenu3' data-bs-toggle='collapse' class='nav-link px-0 align-middle'>
-                                            <i class='fs-4 bi-grid'></i> <span class='ms-1 d-none d-sm-inline'></span> Project </a>
-                                            <ul class='collapse nav flex-column ms-1' id='submenu3' data-bs-parent='#menu'>
-                                            <li class='w-100'>
-                                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'>Ongoing Project</span> </a>
-                                            </li>
-                                            <li>
-                                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'>Upcomming Project</span> </a>
-                                            </li>
-                                            <li>
-                                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'></span>Completed Project</a>
-                                            </li>
-
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href='#submenu3' data-bs-toggle='collapse' class='nav-link px-0 align-middle'>
-                                            <i class='fs-4 bi-grid'></i> <span class='ms-1 d-none d-sm-inline'></span> Training Session </a>
-                                            <ul class='collapse nav flex-column ms-1' id='submenu3' data-bs-parent='#menu'>
-                                            <li class='w-100'>
-                                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'>Ongoing Training Session</span> </a>
-                                            </li>
-                                            <li>
-                                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'>Upcomming Training Session</span> </a>
-                                            </li>
-                                            <li>
-                                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'></span>Completed Training Session</a>
-                                            </li>
-
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href='#submenu3' data-bs-toggle='collapse' class='nav-link px-0 align-middle'>
-                                            <i class='fs-4 bi-grid'></i> <span class='ms-1 d-none d-sm-inline'></span> Community Gathering</a>
-                                            <ul class='collapse nav flex-column ms-1' id='submenu3' data-bs-parent='#menu'>
-                                            <li class='w-100'>
-                                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'>Ongoing Community Gathering</span> </a>
-                                            </li>
-                                            <li>
-                                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'>Upcomming Community Gathering</span> </a>
-                                            </li>
-                                            <li>
-                                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'></span>Completed Community Gathering</a>
-                                            </li>
-
-                                        </ul>
-                                    </li>
-                                    <li class='w-100'>
-                                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'>Chat</span> </a>
-                                            </li>
-                                            <li class='w-100'>
-                                                <a href='#' class='nav-link px-0'> <span class='d-none d-sm-inline'>Reports</span> </a>
-                                            </li>
-
-                                </ul>
-                                <hr>
-                                <div class='dropdown pb-4'>
-                                    <a href='#' class='d-flex align-items-center text-black text-decoration-none dropdown-toggle' id='dropdownUser1' data-bs-toggle='dropdown' aria-expanded='false'>
-                                        <img src='image\profile.png' alt='hugenerd' width='30' height='30' class='rounded-circle'>
-                                        <span class='d-none d-sm-inline mx-1'>cleanroad</span>
-                                    </a>
-
-                                </div>
-                            </div>
+                </ul>
+                <li class='nav-item dropdown'>
+                    <a class='nav-link dropdown-toggle' data-bs-toggle='dropdown' href='#' role='button' aria-expanded='false'>Project</a>
+                    <ul class='dropdown-menu'>
+                      <li><a class='dropdown-item' href='#'>Ongoing Project</a></li>
+                      <li><a class='dropdown-item' href='#'>Upcomming Project</a></li>
+                      
+                      <li><hr class='dropdown-divider'></li>
+                
+                </ul>
+                <li class='nav-item dropdown'>
+                    <a class='nav-link dropdown-toggle' data-bs-toggle='dropdown' href='#' role='button' aria-expanded='false'>Training Session</a>
+                    <ul class='dropdown-menu'>
+                      <li><a class='dropdown-item' href='#'>Ongoing Training Session</a></li>
+                      <li><a class='dropdown-item' href='#'>Upcomming Training Session</a></li>
+                      <li><hr class='dropdown-divider'></li>
+                
+                </ul>
+                
+                <li class='nav-item dropdown'>
+                    <a class='nav-link dropdown-toggle' data-bs-toggle='dropdown' href='#' role='button' aria-expanded='false'>Community Gathering</a>
+                    <ul class='dropdown-menu'>
+                      <li><a class='dropdown-item' href='#'>Ongoing Community Gathering</a></li>
+                      <li><a class='dropdown-item' href='#'>Upcomming Community Gathering</a></li>
+                      <li><hr class='dropdown-divider'></li
+                        <hr>
+                        <div class='dropdown pb-4'>
+                            <a href='#' class='d-flex align-items-center text-white text-decoration-none dropdown-toggle' id='dropdownUser1' data-bs-toggle='dropdown' aria-expanded='false'>
+                                <img src='image\profile.png' alt='hugenerd' width='30' height='30' class='rounded-circle'>
+                                <span class='d-none d-sm-inline mx-1'>cleanroad</span>
+                            </a>
+                            <ul class='dropdown-menu dropdown-menu-dark text-small shadow'>
+                                <li><a class='dropdown-item' href='#'>New project...</a></li>
+                                <li><a class='dropdown-item' href='#'>Settings</a></li>
+                                <li><a class='dropdown-item' href='#'>Profile</a></li>
+                                <li>
+                                    <hr class='dropdown-divider'>
+                                </li>
+                                <li><a class='dropdown-item' href='#'>Sign out</a></li>
+                            </ul>
                         </div>
-
-                        <section style='background-color: #eee;'>
-                            <div class='container py-5'>
-                                <div class='row'>
-                                    <div class='col'>
-                                        <nav aria-label='breadcrumb' class='bg-light rounded-3 p-3 mb-4'>
-                                            <ol class='breadcrumb mb-0'>
-                                                <li class='breadcrumb-item'><a href='#'>Home</a></li>
-                                                <li class='breadcrumb-item'><a href='#'>User</a></li>
-                                                <li class='breadcrumb-item active' aria-current='page'>User Profile</li>
-                                            </ol>
-                                        </nav>
-                                    </div>
-                                </div>");
-
+                    </div>
+                </div>
+                <div class='col py-3'>"
         }
         public function footer(){
             echo("<div class='container-fluid'>
