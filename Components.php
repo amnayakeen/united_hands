@@ -22,7 +22,8 @@
 		    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
 		    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.2.0/main.min.css'>
 		    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.3.0/main.min.css'>
-            <link rel='stylesheet' href='style.css'>");
+            <link rel='stylesheet' href='style.css'>
+            <link rel='stylesheet' href='calendarstyle.css'>");
         }
         public function header(){
             echo("<header class='p-3 mb-3 border-bottom bg-white sticky-top'>
@@ -72,11 +73,12 @@
                     <div class='nav_list'> <a href='#' class='nav_link active'>
                         <i class='bx bx-grid-alt nav_icon'></i> <span class='nav_name'>Dashboard</span> </a>
                         <a href='#' class='nav_link'><i class='bx bx-user nav_icon'></i> <span class='nav_name'>Profile</span> </a>
-                        <a href='#' class='nav_link'><i class='bx bx-message-square-detail nav_icon'></i> <span class='nav_name'>Chats</span> </a>
+                        <a href='#' class='nav_link'><i class='bx bx-message-square-detail nav_icon'></i> <span class='nav_name'>Private Chats</span> </a>
+                        <a href='#' class='nav_link'><i class='bx bx-chat nav_icon'></i> <span class='nav_name'>Group Chats</span> </a>
                         <a href='#' class='nav_link'><i class='bx bx-hourglass nav_icon'></i> <span class='nav_name'>Upcoming Events</span> </a>
                         <a href='#' class='nav_link'><i class='bx bx-timer nav_icon'></i> <span class='nav_name'>Ongoing Events</span> </a>
                         <a href='#' class='nav_link'><i class='bx bx-star nav_icon'></i> <span class='nav_name'>Rate and Review</span> </a>
-                        <a href='#' class='nav_link'><i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class='nav_name'>Reports</span> </a>
+                        <a href='#' class='nav_link'><i class='bx bx-file-blank nav_icon'></i> <span class='nav_name'>Reports</span> </a>
                     </div>
                 </div>
             </nav>
