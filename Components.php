@@ -72,13 +72,13 @@
                 <div> <a href'#' class='nav_logo'><img class='bi me-2' width='27' height='' src='Images/Logo-icon.png'><span class='nav_logo-name'>United Hands</span> </a>
                     <div class='nav_list'> <a href='#' class='nav_link active'>
                         <i class='bx bx-grid-alt nav_icon'></i> <span class='nav_name'>Dashboard</span> </a>
-                        <a href='#' class='nav_link'><i class='bx bx-user nav_icon'></i> <span class='nav_name'>Profile</span> </a>
-                        <a href='#' class='nav_link'><i class='bx bx-message-square-detail nav_icon'></i> <span class='nav_name'>Private Chats</span> </a>
-                        <a href='#' class='nav_link'><i class='bx bx-chat nav_icon'></i> <span class='nav_name'>Group Chats</span> </a>
-                        <a href='#' class='nav_link'><i class='bx bx-hourglass nav_icon'></i> <span class='nav_name'>Upcoming Events</span> </a>
-                        <a href='#' class='nav_link'><i class='bx bx-timer nav_icon'></i> <span class='nav_name'>Ongoing Events</span> </a>
-                        <a href='#' class='nav_link'><i class='bx bx-star nav_icon'></i> <span class='nav_name'>Rate and Review</span> </a>
-                        <a href='#' class='nav_link'><i class='bx bx-file-blank nav_icon'></i> <span class='nav_name'>Reports</span> </a>
+                        <a href='#' class='nav_link' style='margin-bottom: 10px'><i class='bx bx-user nav_icon'></i> <span class='nav_name'>Profile</span> </a>
+                        <a href='#' class='nav_link' style='margin-bottom: 10px'><i class='bx bx-message-square-detail nav_icon'></i> <span class='nav_name'>Private Chats</span> </a>
+                        <a href='#' class='nav_link' style='margin-bottom: 10px'><i class='bx bx-chat nav_icon'></i> <span class='nav_name'>Group Chats</span> </a>
+                        <a href='#' class='nav_link' style='margin-bottom: 10px'><i class='bx bx-hourglass nav_icon'></i> <span class='nav_name'>Upcoming Events</span> </a>
+                        <a href='#' class='nav_link' style='margin-bottom: 10px'><i class='bx bx-timer nav_icon'></i> <span class='nav_name'>Ongoing Events</span> </a>
+                        <a href='#' class='nav_link' style='margin-bottom: 10px'><i class='bx bx-star nav_icon'></i> <span class='nav_name'>Rate and Review</span> </a>
+                        <a href='#' class='nav_link' style='margin-bottom: 10px'><i class='bx bx-file-blank nav_icon'></i> <span class='nav_name'>Reports</span> </a>
                     </div>
                 </div>
             </nav>
