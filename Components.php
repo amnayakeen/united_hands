@@ -1,7 +1,6 @@
 <?php
     Class Components {
 
-
         public function starterCode(){
             echo("<!doctype html>
                     <html lang='en'>
@@ -25,6 +24,18 @@
             <link rel='stylesheet' href='style.css'>
             <link rel='stylesheet' href='calendarstyle.css'>");
         }
+        public function eventStarterCode(){
+            echo("<!doctype html>
+                <html lang='en'>
+                <meta charset='utf-8'>
+                <meta name='viewport' content='width=device-width, initial-scale=1'>
+                <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH' crossorigin='anonymous'>
+                <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css'>
+                <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'>
+                <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css'>
+                <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+                <link rel='stylesheet' href='eventstyle.css'>");
+        }
         public function header(){
             echo("<header class='p-3 mb-3 border-bottom bg-white sticky-top'>
                 <div class='container'>
@@ -42,50 +53,173 @@
             </header>");
         }
         public function dashboardHeader(){
-            echo("<body id='body-pd'>
-            <header class='header' id='header'>
-                <div class='header_toggle'> <i class='bx bx-menu' id='header-toggle'></i> </div>
-                <div class='d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start'>
+            session_start();
+            if(!isset($_SESSION["user_id"]))
+            {
+                header ("location:index.php");
+            }
 
-                    <form class='col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3'  role='search'>
-                        <input type='search' class='form-control' placeholder='Search...' aria-label='Search'>
-                    </form>
+            $this->user_id = $_SESSION["user_id"];
+            $this->name = $_SESSION["name"];
 
-                    <div class='dropdown text-end'>
-                        <a href='#' class='d-block link-body-emphasis text-decoration-none dropdown-toggle justify-content-right' data-bs-toggle='dropdown' aria-expanded='false'>
-                            <img src='https://github.com/mdo.png' alt='mdo' width='32' height='32' class='rounded-circle'>
-                        </a>
-                        <ul class='dropdown-menu text-small'>
-                            <center><li>Username</li>
-                            <li>User ID</li>
-                            <li><hr class='dropdown-divider'></li>
-                            <li><a class='dropdown-item' href='index.php'>Sign out</a></li></center>
-                        </ul>
-                    </div>
-                </div>
-            </header>");
+            require_once("User.php");
+            $this->user = new User();
+            $this->result=mysqli_query($this->user->conn,"SELECT * FROM user WHERE user_id='$this->user_id'");
+            $this->rec=mysqli_fetch_assoc($this->result);
+
+            if($this->rec['type']=="volunteer")
+            {
+                $query=mysqli_query($this->user->conn,"SELECT * FROM volunteer WHERE user_id='$this->user_id'");
+                $rec=mysqli_fetch_assoc($query);
+                $username=$rec['fullname'];
+
+                echo("<body id='body-pd'>
+                    <header class='header' id='header'>
+                        <div class='header_toggle'> <i class='bx bx-menu' id='header-toggle'></i> </div>
+                        <div class='d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start'>
+
+                            <form class='col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3'  role='search'>
+                                <input type='search' class='form-control' placeholder='Search...' aria-label='Search'>
+                            </form>
+
+                            <div class='dropdown text-end'>
+                                <a href='#' class='d-block link-body-emphasis text-decoration-none dropdown-toggle justify-content-right' data-bs-toggle='dropdown' aria-expanded='false'>
+                                    <img src='Images/".$rec['image']."' alt='mdo' width='32' height='32' class='rounded-circle'>
+                                </a>
+                                <ul class='dropdown-menu text-small'>
+                                <center><li>$this->name</li>
+                                <li>User ID:$this->user_id</li>
+                                    <li><hr class='dropdown-divider'></li>
+                                    <li><a class='dropdown-item' href='logout.php'>Sign out</a></li></center>
+                                </ul>
+                            </div>
+                        </div>
+                    </header>");
+            }
+
+            else if($this->rec['type']=="organization")
+            {
+                $query=mysqli_query($this->user->conn,"SELECT * FROM organization WHERE user_id='$this->user_id'");
+                $rec=mysqli_fetch_assoc($query);
+                $username=$rec['name'];
+
+                echo("<body id='body-pd'>
+                    <header class='header' id='header'>
+                        <div class='header_toggle'> <i class='bx bx-menu' id='header-toggle'></i> </div>
+                        <div class='d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start'>
+
+                            <form class='col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3'  role='search'>
+                                <input type='search' class='form-control' placeholder='Search...' aria-label='Search'>
+                            </form>
+
+                            <div class='dropdown text-end'>
+                                <a href='#' class='d-block link-body-emphasis text-decoration-none dropdown-toggle justify-content-right' data-bs-toggle='dropdown' aria-expanded='false'>
+                                    <img src='Images/".$rec['logo']."' alt='mdo' width='32' height='32' class='rounded-circle'>
+                                </a>
+                                <ul class='dropdown-menu text-small'>
+                                <center><li>$username</li>
+                                <li>User ID:$this->user_id</li>
+                                    <li><hr class='dropdown-divider'></li>
+                                    <li><a class='dropdown-item' href='logout.php'>Sign out</a></li></center>
+                                </ul>
+                            </div>
+                        </div>
+                    </header>");
+            }
+            else
+            {
+                $query=mysqli_query($this->user->conn,"SELECT * FROM user WHERE user_id='$this->user_id'");
+                $rec=mysqli_fetch_assoc($query);
+                $username=$rec['email'];
+
+                echo("<body id='body-pd'>
+                    <header class='header' id='header'>
+                        <div class='header_toggle'> <i class='bx bx-menu' id='header-toggle'></i> </div>
+                        <div class='d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start'>
+
+                            <form class='col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3'  role='search'>
+                                <input type='search' class='form-control' placeholder='Search...' aria-label='Search'>
+                            </form>
+
+                            <div class='dropdown text-end'>
+                                <a href='#' class='d-block link-body-emphasis text-decoration-none dropdown-toggle justify-content-right' data-bs-toggle='dropdown' aria-expanded='false'>
+                                    <img src='https://github.com/mdo.png' alt='mdo' width='32' height='32' class='rounded-circle'>
+                                </a>
+                                <ul class='dropdown-menu text-small'>
+                                <center><li>$username</li>
+                                <li>User ID:$this->user_id</li>
+                                    <li><hr class='dropdown-divider'></li>
+                                    <li><a class='dropdown-item' href='logout.php'>Sign out</a></li></center>
+                                </ul>
+                            </div>
+                        </div>
+                    </header>");
+            }
         }
         public function dashboardSidebar(){
-            echo("<script src='script.js'></script>
-            <div class='l-navbar' id='nav-bar'>
-            <nav class='nav'>
-                <div> <a href'#' class='nav_logo'><img class='bi me-2' width='27' height='' src='Images/Logo-icon.png'><span class='nav_logo-name'>United Hands</span> </a>
-                    <div class='nav_list'> <a href='#' class='nav_link active'>
-                        <i class='bx bx-grid-alt nav_icon'></i> <span class='nav_name'>Dashboard</span> </a>
-                        <a href='#' class='nav_link' style='margin-bottom: 10px'><i class='bx bx-user nav_icon'></i> <span class='nav_name'>Profile</span> </a>
-                        <a href='#' class='nav_link' style='margin-bottom: 10px'><i class='bx bx-message-square-detail nav_icon'></i> <span class='nav_name'>Private Chats</span> </a>
-                        <a href='#' class='nav_link' style='margin-bottom: 10px'><i class='bx bx-chat nav_icon'></i> <span class='nav_name'>Group Chats</span> </a>
-                        <a href='#' class='nav_link' style='margin-bottom: 10px'><i class='bx bx-hourglass nav_icon'></i> <span class='nav_name'>Upcoming Events</span> </a>
-                        <a href='#' class='nav_link' style='margin-bottom: 10px'><i class='bx bx-timer nav_icon'></i> <span class='nav_name'>Ongoing Events</span> </a>
-                        <a href='#' class='nav_link' style='margin-bottom: 10px'><i class='bx bx-star nav_icon'></i> <span class='nav_name'>Rate and Review</span> </a>
-                        <a href='#' class='nav_link' style='margin-bottom: 10px'><i class='bx bx-file-blank nav_icon'></i> <span class='nav_name'>Reports</span> </a>
-                    </div>
-                </div>
-            </nav>
-        </div>");
+            if($this->rec['type']=="volunteer")
+            {
+                echo("<script src='script.js'></script>
+                    <div class='l-navbar' id='nav-bar'>
+                        <nav class='nav'>
+                            <div> <a href='index.php' class='nav_logo'><img class='bi me-2' width='27' height='' src='Images/Logo-icon.png'><span class='nav_logo-name'>United Hands</span> </a>
+                                <div class='nav_list'>
+                                    <a href='volunteer-dashboard.php' class='nav_link active'><i class='bx bx-grid-alt nav_icon'></i> <span class='nav_name'>Dashboard</span> </a>
+                                    <a href='volunteer-profile.php' class='nav_link'><i class='bx bx-user nav_icon'></i> <span class='nav_name'>Profile</span> </a>
+                                    <a href='volunteer-private-chats.php' class='nav_link'><i class='bx bx-message-square-detail nav_icon'></i> <span class='nav_name'>Private Chats</span> </a>
+                                    <a href='groupchat.php' class='nav_link'><i class='bx bx-chat nav_icon'></i> <span class='nav_name'>Group Chats</span> </a>
+                                    <a href='upcoming-projects.php' class='nav_link'><i class='bx bx-hourglass nav_icon'></i> <span class='nav_name'>Upcoming Events</span> </a>
+                                    <a href='ongoing-events.php' class='nav_link'><i class='bx bx-timer nav_icon'></i> <span class='nav_name'>Ongoing Events</span> </a>
+                                    <a href='rate.php' class='nav_link'><i class='bx bx-star nav_icon'></i> <span class='nav_name'>Rate and Review</span> </a>
+                                    <a href='reports.php' class='nav_link'><i class='bx bx-file-blank nav_icon'></i> <span class='nav_name'>Reports</span> </a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>");
+            }
+            else if($this->rec['type']=="organization")
+            {
+                echo("<script src='script.js'></script>
+                    <div class='l-navbar' id='nav-bar'>
+                        <nav class='nav'>
+                            <div> <a href='index.php' class='nav_logo'><img class='bi me-2' width='27' height='' src='Images/Logo-icon.png'><span class='nav_logo-name'>United Hands</span> </a>
+                                <div class='nav_list'>
+                                    <a href='#' class='nav_link active'><i class='bx bx-grid-alt nav_icon'></i> <span class='nav_name'>Dashboard</span> </a>
+                                    <a href='#' class='nav_link'><i class='bx bx-user nav_icon'></i> <span class='nav_name'>Profile</span> </a>
+                                    <a href='#' class='nav_link'><i class='bx bx-message-square-detail nav_icon'></i> <span class='nav_name'>Private Chats</span> </a>
+                                    <a href='#' class='nav_link'><i class='bx bx-chat nav_icon'></i> <span class='nav_name'>Group Chats</span> </a>
+                                    <a href='upcoming-events.php' class='nav_link'><i class='bx bx-hourglass nav_icon'></i> <span class='nav_name'>Upcoming Events</span> </a>
+                                    <a href='#' class='nav_link'><i class='bx bx-timer nav_icon'></i> <span class='nav_name'>Ongoing Events</span> </a>
+                                    <a href='#' class='nav_link'><i class='bx bx-star nav_icon'></i> <span class='nav_name'>Rate and Review</span> </a>
+                                    <a href='#' class='nav_link'><i class='bx bx-file-blank nav_icon'></i> <span class='nav_name'>Reports</span> </a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>");
+            }
+            else
+            {
+                echo("<script src='script.js'></script>
+                    <div class='l-navbar' id='nav-bar'>
+                        <nav class='nav'>
+                            <div> <a href='index.php' class='nav_logo'><img class='bi me-2' width='27' height='' src='Images/Logo-icon.png'><span class='nav_logo-name'>United Hands</span> </a>
+                                <div class='nav_list'>
+                                    <a href='#' class='nav_link active'><i class='bx bx-grid-alt nav_icon'></i> <span class='nav_name'>Dashboard</span> </a>
+                                    <a href='#' class='nav_link'><i class='bx bx-user nav_icon'></i> <span class='nav_name'>Profile</span> </a>
+                                    <a href='#' class='nav_link'><i class='bx bx-message-square-detail nav_icon'></i> <span class='nav_name'>Private Chats</span> </a>
+                                    <a href='#' class='nav_link'><i class='bx bx-chat nav_icon'></i> <span class='nav_name'>Group Chats</span> </a>
+                                    <a href='upcoming-events.php' class='nav_link'><i class='bx bx-hourglass nav_icon'></i> <span class='nav_name'>Upcoming Events</span> </a>
+                                    <a href='#' class='nav_link'><i class='bx bx-timer nav_icon'></i> <span class='nav_name'>Ongoing Events</span> </a>
+                                    <a href='#' class='nav_link'><i class='bx bx-star nav_icon'></i> <span class='nav_name'>Rate and Review</span> </a>
+                                    <a href='#' class='nav_link'><i class='bx bx-file-blank nav_icon'></i> <span class='nav_name'>Reports</span> </a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>");
+            }
         }
         public function footer(){
-            echo("<div class='container-fluid'>
+            echo("<div class='container fixed-bottom'>
                     <footer class='d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top' style='padding-left:110px; padding-right:130px;'>
                         <div class='col-md-4 d-flex align-items-center'>
                         <span class='mb-3 mb-md-0'>&copy; 2024 Company, Inc</span>
