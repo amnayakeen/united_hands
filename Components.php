@@ -211,7 +211,7 @@
                                     <a href='chat.php' class='nav_link' style='margin-bottom: 10px'><i class='bx bx-message-square-detail nav_icon'></i> <span class='nav_name'>Private Chats</span> </a>
                                     <a href='groupchat.php' class='nav_link' style='margin-bottom: 10px'><i class='bx bx-chat nav_icon'></i> <span class='nav_name'>Group Chats</span> </a>
                                     <a href='upcoming-events.php' class='nav_link' style='margin-bottom: 10px'><i class='bx bx-hourglass nav_icon'></i> <span class='nav_name'>Upcoming Events</span> </a>
-                                    <a href='#' class='nav_link' style='margin-bottom: 10px'><i class='bx bx-star nav_icon'></i> <span class='nav_name'>Rate and Review</span> </a>
+                                    <a href='rate.php' class='nav_link' style='margin-bottom: 10px'><i class='bx bx-star nav_icon'></i> <span class='nav_name'>Rate and Review</span> </a>
                                     <a href='reports.php' class='nav_link' style='margin-bottom: 10px'><i class='bx bx-file-blank nav_icon'></i> <span class='nav_name'>Reports</span> </a>
                                 </div>
                             </div>
