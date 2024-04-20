@@ -184,14 +184,15 @@
                         <nav class='nav'>
                             <div> <a href='index.php' class='nav_logo'><img class='bi me-2' width='27' height='' src='Images/Logo-icon.png'><span class='nav_logo-name'>United Hands</span> </a>
                                 <div class='nav_list'>
-                                    <a href='#' class='nav_link active'><i class='bx bx-grid-alt nav_icon'></i> <span class='nav_name'>Dashboard</span> </a>
-                                    <a href='#' class='nav_link'><i class='bx bx-user nav_icon'></i> <span class='nav_name'>Profile</span> </a>
-                                    <a href='#' class='nav_link'><i class='bx bx-message-square-detail nav_icon'></i> <span class='nav_name'>Private Chats</span> </a>
-                                    <a href='#' class='nav_link'><i class='bx bx-chat nav_icon'></i> <span class='nav_name'>Group Chats</span> </a>
+                                	 <a href='organization-dashboard.php' class='nav_link active'><i class='bx bx-grid-alt nav_icon'></i> <span class='nav_name'>Dashboard</span> </a>
+                                    <a href='organization-profile.php' class='nav_link'><i class='bx bx-user nav_icon'></i> <span class='nav_name'>Profile</span> </a>
+                                    <a href='chat.php' class='nav_link'><i class='bx bx-message-square-detail nav_icon'></i> <span class='nav_name'>Private Chats</span> </a>
+                                    <a href='groupchat.php' class='nav_link'><i class='bx bx-chat nav_icon'></i> <span class='nav_name'>Group Chats</span> </a>
                                     <a href='upcoming-events.php' class='nav_link'><i class='bx bx-hourglass nav_icon'></i> <span class='nav_name'>Upcoming Events</span> </a>
-                                    <a href='#' class='nav_link'><i class='bx bx-timer nav_icon'></i> <span class='nav_name'>Ongoing Events</span> </a>
-                                    <a href='#' class='nav_link'><i class='bx bx-star nav_icon'></i> <span class='nav_name'>Rate and Review</span> </a>
-                                    <a href='#' class='nav_link'><i class='bx bx-file-blank nav_icon'></i> <span class='nav_name'>Reports</span> </a>
+                                    <a href='ongoing-events.php' class='nav_link'><i class='bx bx-timer nav_icon'></i> <span class='nav_name'>Ongoing Events</span> </a>
+                                    <a href='rate.php' class='nav_link'><i class='bx bx-star nav_icon'></i> <span class='nav_name'>Rate and Review</span> </a>
+                                    <a href='reports.php' class='nav_link'><i class='bx bx-file-blank nav_icon'></i> <span class='nav_name'>Reports</span> </a>
+
                                 </div>
                             </div>
                         </nav>
