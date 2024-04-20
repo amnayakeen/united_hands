@@ -26,7 +26,7 @@ view_Reports($connection);
   <body>
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-    <a href="download-reports-volunteer.php">
+    <a href="download_reports.php">
   <button class="btn btn-info btn-outline-light me-md-2" type="button">Download</button>
 </div>
     </a>
